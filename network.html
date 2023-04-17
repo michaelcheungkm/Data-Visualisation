@@ -1,0 +1,116 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "Albumin", "label": "Albumin", "shape": "dot"}, {"id": "ALP", "label": "ALP", "shape": "dot"}, {"id": "ALT", "label": "ALT", "shape": "dot"}, {"id": "AST", "label": "AST", "shape": "dot"}, {"id": "Bilirubin", "label": "Bilirubin", "shape": "dot"}, {"id": "BMI", "label": "BMI", "shape": "dot"}, {"id": "BUN", "label": "BUN", "shape": "dot"}, {"id": "Ca", "label": "Ca", "shape": "dot"}, {"id": "CO2", "label": "CO2", "shape": "dot"}, {"id": "Cl", "label": "Cl", "shape": "dot"}, {"id": "Cholesterol", "label": "Cholesterol", "shape": "dot"}, {"id": "HDL", "label": "HDL", "shape": "dot"}, {"id": "LDL", "label": "LDL", "shape": "dot"}, {"id": "Creatinine", "label": "Creatinine", "shape": "dot"}, {"id": "Fibrinogen", "label": "Fibrinogen", "shape": "dot"}, {"id": "Glucose", "label": "Glucose", "shape": "dot"}, {"id": "HCO3", "label": "HCO3", "shape": "dot"}, {"id": "HCT", "label": "HCT", "shape": "dot"}, {"id": "Hemoglobin", "label": "Hemoglobin", "shape": "dot"}, {"id": "K", "label": "K", "shape": "dot"}, {"id": "Lactate", "label": "Lactate", "shape": "dot"}, {"id": "Mg", "label": "Mg", "shape": "dot"}, {"id": "Na", "label": "Na", "shape": "dot"}, {"id": "Arterial pH", "label": "Arterial pH", "shape": "dot"}, {"id": "Phosphate", "label": "Phosphate", "shape": "dot"}, {"id": "Platelets", "label": "Platelets", "shape": "dot"}, {"id": "SaO2", "label": "SaO2", "shape": "dot"}, {"id": "Triglycerides", "label": "Triglycerides", "shape": "dot"}, {"id": "Troponin I", "label": "Troponin I", "shape": "dot"}, {"id": "Troponin T", "label": "Troponin T", "shape": "dot"}, {"id": "Urea", "label": "Urea", "shape": "dot"}, {"id": "Urine output", "label": "Urine output", "shape": "dot"}, {"id": "WBC", "label": "WBC", "shape": "dot"}, {"id": "SBP", "label": "SBP", "shape": "dot"}, {"id": "DBP", "label": "DBP", "shape": "dot"}, {"id": "MAP", "label": "MAP", "shape": "dot"}, {"id": "SpO2", "label": "SpO2", "shape": "dot"}, {"id": "HR", "label": "HR", "shape": "dot"}, {"id": "RR", "label": "RR", "shape": "dot"}, {"id": "Body temperature", "label": "Body temperature", "shape": "dot"}, {"id": "Triglyceride", "label": "Triglyceride", "shape": "dot"}, {"id": "Chloride", "label": "Chloride", "shape": "dot"}]);
+        edges = new vis.DataSet([{"color": "orange", "from": "Albumin", "physics": false, "to": "Arterial pH"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "Bilirubin"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "BMI"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "Ca"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "DBP"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "Fibrinogen"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "HCO3"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "Lactate"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "SBP"}, {"color": "orange", "from": "Albumin", "physics": false, "to": "WBC"}, {"color": "red", "from": "ALP", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "ALP", "physics": false, "to": "Ca"}, {"color": "orange", "from": "ALP", "physics": false, "to": "Triglyceride"}, {"color": "red", "from": "ALT", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "ALT", "physics": false, "to": "Triglyceride"}, {"color": "red", "from": "AST", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "AST", "physics": false, "to": "Triglyceride"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "BUN"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "Creatinine"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "Fibrinogen"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "HDL"}, {"color": "orange", "from": "Bilirubin", "physics": false, "to": "LDL"}, {"color": "red", "from": "BMI", "physics": false, "to": "HCT"}, {"color": "red", "from": "BMI", "physics": false, "to": "Platelets"}, {"color": "orange", "from": "BMI", "physics": false, "to": "Arterial pH"}, {"color": "orange", "from": "BMI", "physics": false, "to": "Ca"}, {"color": "orange", "from": "BMI", "physics": false, "to": "Na"}, {"color": "orange", "from": "BMI", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "BMI", "physics": false, "to": "WBC"}, {"color": "red", "from": "BUN", "physics": false, "to": "Lactate"}, {"color": "red", "from": "BUN", "physics": false, "to": "Urea"}, {"color": "red", "from": "Ca", "physics": false, "to": "Lactate"}, {"color": "orange", "from": "Ca", "physics": false, "to": "DBP"}, {"color": "orange", "from": "Ca", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Ca", "physics": false, "to": "SBP"}, {"color": "orange", "from": "Ca", "physics": false, "to": "Triglyceride"}, {"color": "red", "from": "CO2", "physics": false, "to": "HCO3"}, {"color": "red", "from": "Cl", "physics": false, "to": "Lactate"}, {"color": "orange", "from": "Cl", "physics": false, "to": "Body temperature"}, {"color": "orange", "from": "Cl", "physics": false, "to": "DBP"}, {"color": "orange", "from": "Cl", "physics": false, "to": "HCO3"}, {"color": "orange", "from": "Cl", "physics": false, "to": "HR"}, {"color": "orange", "from": "Cl", "physics": false, "to": "Na"}, {"color": "orange", "from": "Cl", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Cl", "physics": false, "to": "SBP"}, {"color": "orange", "from": "Cl", "physics": false, "to": "SpO2"}, {"color": "red", "from": "Cholesterol", "physics": false, "to": "Glucose"}, {"color": "red", "from": "Cholesterol", "physics": false, "to": "HDL"}, {"color": "red", "from": "Cholesterol", "physics": false, "to": "LDL"}, {"color": "red", "from": "Cholesterol", "physics": false, "to": "Triglycerides"}, {"color": "orange", "from": "Cholesterol", "physics": false, "to": "Bilirubin"}, {"color": "orange", "from": "Cholesterol", "physics": false, "to": "HCO3"}, {"color": "orange", "from": "Cholesterol", "physics": false, "to": "HCT"}, {"color": "red", "from": "HDL", "physics": false, "to": "LDL"}, {"color": "red", "from": "HDL", "physics": false, "to": "Platelets"}, {"color": "red", "from": "HDL", "physics": false, "to": "Troponin I"}, {"color": "red", "from": "HDL", "physics": false, "to": "Troponin T"}, {"color": "orange", "from": "HDL", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "HDL", "physics": false, "to": "SaO2"}, {"color": "red", "from": "LDL", "physics": false, "to": "Mg"}, {"color": "red", "from": "Creatinine", "physics": false, "to": "K"}, {"color": "red", "from": "Creatinine", "physics": false, "to": "Urea"}, {"color": "orange", "from": "Creatinine", "physics": false, "to": "Fibrinogen"}, {"color": "orange", "from": "Creatinine", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Fibrinogen", "physics": false, "to": "SpO2"}, {"color": "red", "from": "Glucose", "physics": false, "to": "K"}, {"color": "red", "from": "Glucose", "physics": false, "to": "Mg"}, {"color": "red", "from": "Glucose", "physics": false, "to": "Platelets"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "Arterial pH"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "HCO3"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "Hemoglobin"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "SpO2"}, {"color": "orange", "from": "Glucose", "physics": false, "to": "WBC"}, {"color": "red", "from": "HCO3", "physics": false, "to": "Lactate"}, {"color": "red", "from": "HCO3", "physics": false, "to": "RR"}, {"color": "orange", "from": "HCO3", "physics": false, "to": "Arterial pH"}, {"color": "orange", "from": "HCO3", "physics": false, "to": "Hemoglobin"}, {"color": "orange", "from": "HCT", "physics": false, "to": "DBP"}, {"color": "orange", "from": "HCT", "physics": false, "to": "MAP"}, {"color": "orange", "from": "HCT", "physics": false, "to": "SBP"}, {"color": "red", "from": "Hemoglobin", "physics": false, "to": "Mg"}, {"color": "red", "from": "Hemoglobin", "physics": false, "to": "SaO2"}, {"color": "orange", "from": "Hemoglobin", "physics": false, "to": "DBP"}, {"color": "orange", "from": "Hemoglobin", "physics": false, "to": "Lactate"}, {"color": "orange", "from": "Hemoglobin", "physics": false, "to": "MAP"}, {"color": "orange", "from": "Hemoglobin", "physics": false, "to": "SBP"}, {"color": "red", "from": "K", "physics": false, "to": "Mg"}, {"color": "red", "from": "K", "physics": false, "to": "Urine output"}, {"color": "red", "from": "Lactate", "physics": false, "to": "Arterial pH"}, {"color": "red", "from": "Lactate", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Lactate", "physics": false, "to": "Cholesterol"}, {"color": "orange", "from": "Lactate", "physics": false, "to": "Na"}, {"color": "orange", "from": "Mg", "physics": false, "to": "Triglyceride"}, {"color": "red", "from": "Na", "physics": false, "to": "Urine output"}, {"color": "orange", "from": "Na", "physics": false, "to": "Phosphate"}, {"color": "orange", "from": "Na", "physics": false, "to": "SBP"}, {"color": "red", "from": "Arterial pH", "physics": false, "to": "RR"}, {"color": "orange", "from": "Arterial pH", "physics": false, "to": "HR"}, {"color": "orange", "from": "Phosphate", "physics": false, "to": "DBP"}, {"color": "orange", "from": "Phosphate", "physics": false, "to": "SBP"}, {"color": "red", "from": "Platelets", "physics": false, "to": "DBP"}, {"color": "red", "from": "Platelets", "physics": false, "to": "SBP"}, {"color": "red", "from": "SaO2", "physics": false, "to": "SpO2"}, {"color": "orange", "from": "SaO2", "physics": false, "to": "Triglyceride"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "ALP"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "ALT"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "AST"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "Ca"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "Mg"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "SaO2"}, {"color": "orange", "from": "Triglycerides", "physics": false, "to": "WBC"}, {"color": "red", "from": "Troponin I", "physics": false, "to": "Troponin T"}, {"color": "orange", "from": "Troponin I", "physics": false, "to": "LDL"}, {"color": "red", "from": "Troponin T", "physics": false, "to": "Glucose"}, {"color": "red", "from": "Urine output", "physics": false, "to": "Body temperature"}, {"color": "red", "from": "Urine output", "physics": false, "to": "MAP"}, {"color": "orange", "from": "WBC", "physics": false, "to": "Triglyceride"}, {"color": "red", "from": "SBP", "physics": false, "to": "DBP"}, {"color": "red", "from": "SBP", "physics": false, "to": "MAP"}, {"color": "orange", "from": "SBP", "physics": false, "to": "Glucose"}, {"color": "red", "from": "DBP", "physics": false, "to": "MAP"}, {"color": "orange", "from": "DBP", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "DBP", "physics": false, "to": "Na"}, {"color": "orange", "from": "HR", "physics": false, "to": "Glucose"}, {"color": "orange", "from": "Body temperature", "physics": false, "to": "Chloride"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "repulsion": {
+            "centralGravity": 0.2,
+            "damping": 0.09,
+            "nodeDistance": 100,
+            "springConstant": 0.05,
+            "springLength": 200
+        },
+        "solver": "repulsion",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

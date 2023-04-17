@@ -1,0 +1,16 @@
+Albumin,ALP,ALT,AST,Bilirubin,BMI,BUN,Ca,CO2,Cl,Cholesterol,HDL,LDL,Creatinine,Fibrinogen,Glucose,HCO3,HCT,Hemoglobin,K,Lactate,Mg,Na,Arterial pH,Phosphate,Platelets,SaO2,Triglycerides,Troponin I,Troponin T,Urea,Urine output,WBC,SBP,DBP,MAP,SpO2,HR,RR,Body temperature
+050Arterial pH,090Glucose,090Glucose,090Glucose,050Albumin,090HCT,090Lactate,090Lactate,090HCO3,090Lactate,090Glucose,090Cholesterol,090Cholesterol,090K,050Albumin,090ALP,090CO2,090BMI,090Mg,090Creatinine,090Arterial pH,090Glucose,090Urine output,090Lactate,090Lactate,090BMI,090Hemoglobin,090Cholesterol,090HDL,090Glucose,090BUN,090Body temperature,050Albumin,090DBP,090MAP,090DBP,090SaO2,050Arterial pH,090HCO3,090Urine output
+050Bilirubin,050Ca,050Triglyceride,050Triglyceride,050BUN,090Platelets,090Urea,050Albumin,,050Body temperature,090HDL,090LDL,090HDL,090Urea,050Bilirubin,090ALT,090Lactate,050Cholesterol,090SaO2,090Glucose,090BUN,090Hemoglobin,050BMI,090RR,050BMI,090DBP,090SpO2,050ALP,090Troponin T,090HDL,090Creatinine,090K,050BMI,090MAP,090Platelets,090SBP,050Cl,050Cl,090Arterial pH,050Chloride
+050BMI,050Triglyceride,,,050Creatinine,050Albumin,050Bilirubin,050ALP,,050DBP,090LDL,090Platelets,090Mg,050Bilirubin,050Creatinine,090AST,090RR,050DBP,050DBP,090Mg,090Ca,090K,050Cl,050Albumin,050Ca,090HDL,050HDL,050ALT,050LDL,090Troponin I,,090MAP,050Glucose,090Platelets,090SBP,090Urine output,050Fibrinogen,050Glucose,,
+050Ca,,,,050Fibrinogen,050Arterial pH,,050BMI,,050HCO3,090Triglycerides,090Troponin I,050Bilirubin,050Fibrinogen,050SpO2,090Cholesterol,050Albumin,050MAP,050Glucose,090Urine output,090Cl,090LDL,050Lactate,050BMI,050Cl,090SBP,050Triglyceride,050AST,,,,090Na,050Triglyceride,050Ca,050Albumin,050HCT,050Glucose,,,
+050DBP,,,,050Glucose,050Ca,,050DBP,,050HR,050Bilirubin,090Troponin T,,050Phosphate,,090K,050Arterial pH,050SBP,050HCO3,,090HCO3,050Triglyceride,050Phosphate,050Glucose,050Creatinine,,,050Ca,,,,,,050Cl,050Ca,050Hemoglobin,,,,
+050Fibrinogen,,,,050HDL,050Na,,050Phosphate,,050Na,050HCO3,050Phosphate,,,,090Mg,050Cholesterol,,050Lactate,,090Phosphate,,050SBP,050HCO3,050DBP,,,050Mg,,,,,,050Glucose,050Cl,,,,,
+050Glucose,,,,050LDL,050Phosphate,,050SBP,,050Phosphate,050HCT,050SaO2,,,,090Platelets,050Cl,,050MAP,,050Albumin,,,050HR,050Glucose,,,050SaO2,,,,,,050HCT,050Glucose,,,,,
+050HCO3,,,,,050WBC,,050Triglyceride,,050SBP,,,,,,050Albumin,050Glucose,,050SBP,,050Cholesterol,,,,050HDL,,,050WBC,,,,,,050Hemoglobin,050HCT,,,,,
+050Lactate,,,,,,,,,050SpO2,,,,,,050Arterial pH,050Hemoglobin,,,,050Hemoglobin,,,,050Na,,,,,,,,,050Na,050Hemoglobin,,,,,
+050SBP,,,,,,,,,,,,,,,050Bilirubin,,,,,050Na,,,,050SBP,,,,,,,,,050Phosphate,050Na,,,,,
+050WBC,,,,,,,,,,,,,,,050HCO3,,,,,,,,,,,,,,,,,,,050Phosphate,,,,,
+,,,,,,,,,,,,,,,050Hemoglobin,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,050Phosphate,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,050SpO2,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,050WBC,,,,,,,,,,,,,,,,,,,,,,,,

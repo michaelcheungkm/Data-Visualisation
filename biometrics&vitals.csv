@@ -1,0 +1,16 @@
+Albumin,ALP,ALT,AST,Bilirubin,BMI,BUN,Ca,CO2,Cl,Cholesterol,HDL,LDL,Creatinine,Fibrinogen,Glucose,HCO3,HCT,Hemoglobin,K,Lactate,Mg,Na,Arterial pH,Phosphate,Platelets,SaO2,Triglycerides,Troponin I,Troponin T,Urea,Urine output,WBC,SBP,DBP,MAP,SpO2,HR,RR,Body temperature
+Arterial pH,Glucose,Glucose,Glucose,Albumin,HCT,Lactate,Lactate,HCO3,Lactate,Glucose,Cholesterol,Cholesterol,K,Albumin,ALP,CO2,BMI,Mg,Creatinine,Arterial pH,Glucose,Urine output,Lactate,Lactate,BMI,Hemoglobin,Cholesterol,HDL,Glucose,BUN,Body temperature,Albumin,DBP,MAP,DBP,SaO2,Arterial pH,HCO3,Urine output
+Bilirubin,Ca,Triglyceride,Triglyceride,BUN,Platelets,Urea,Albumin,,Body temperature,HDL,LDL,HDL,Urea,Bilirubin,ALT,Lactate,Cholesterol,SaO2,Glucose,BUN,Hemoglobin,BMI,RR,BMI,DBP,SpO2,ALP,Troponin T,HDL,Creatinine,K,BMI,MAP,Platelets,SBP,Cl,Cl,Arterial pH,Chloride
+BMI,Triglyceride,,,Creatinine,Albumin,Bilirubin,ALP,,DBP,LDL,Platelets,Mg,Bilirubin,Creatinine,AST,RR,DBP,DBP,Mg,Ca,K,Cl,Albumin,Ca,HDL,HDL,ALT,LDL,Troponin I,,MAP,Glucose,Platelets,SBP,Urine output,Fibrinogen,Glucose,,
+Ca,,,,Fibrinogen,Arterial pH,,BMI,,HCO3,Triglycerides,Troponin I,Bilirubin,Fibrinogen,SpO2,Cholesterol,Albumin,MAP,Glucose,Urine output,Cl,LDL,Lactate,BMI,Cl,SBP,Triglyceride,AST,,,,Na,Triglyceride,Ca,Albumin,HCT,Glucose,,,
+DBP,,,,Glucose,Ca,,DBP,,HR,Bilirubin,Troponin T,,Phosphate,,K,Arterial pH,SBP,HCO3,,HCO3,Triglyceride,Phosphate,Glucose,Creatinine,,,Ca,,,,,,Cl,Ca,Hemoglobin,,,,
+Fibrinogen,,,,HDL,Na,,Phosphate,,Na,HCO3,Phosphate,,,,Mg,Cholesterol,,Lactate,,Phosphate,,SBP,HCO3,DBP,,,Mg,,,,,,Glucose,Cl,,,,,
+Glucose,,,,LDL,Phosphate,,SBP,,Phosphate,HCT,SaO2,,,,Platelets,Cl,,MAP,,Albumin,,,HR,Glucose,,,SaO2,,,,,,HCT,Glucose,,,,,
+HCO3,,,,,WBC,,Triglyceride,,SBP,,,,,,Albumin,Glucose,,SBP,,Cholesterol,,,,HDL,,,WBC,,,,,,Hemoglobin,HCT,,,,,
+Lactate,,,,,,,,,SpO2,,,,,,Arterial pH,Hemoglobin,,,,Hemoglobin,,,,Na,,,,,,,,,Na,Hemoglobin,,,,,
+SBP,,,,,,,,,,,,,,,Bilirubin,,,,,Na,,,,SBP,,,,,,,,,Phosphate,Na,,,,,
+WBC,,,,,,,,,,,,,,,HCO3,,,,,,,,,,,,,,,,,,,Phosphate,,,,,
+,,,,,,,,,,,,,,,Hemoglobin,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,Phosphate,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,SpO2,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,WBC,,,,,,,,,,,,,,,,,,,,,,,,

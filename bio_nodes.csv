@@ -1,0 +1,43 @@
+name,group
+MAP,0
+Phosphate,1
+Platelets,2
+Lactate,3
+BUN,4
+HCT,5
+CO2,6
+SpO2,7
+DBP,8
+HCO3,9
+SaO2,10
+Body temperature,11
+Glucose,12
+ALP,13
+HR,14
+Hemoglobin,15
+Cl,16
+Mg,17
+Triglycerides,18
+Albumin,19
+Creatinine,20
+SBP,21
+ALT,22
+HDL,23
+RR,24
+LDL,25
+Troponin I,26
+AST,27
+Bilirubin,28
+Triglyceride,29
+Cholesterol,30
+WBC,31
+BMI,32
+Urea,33
+Troponin T,34
+K,35
+Arterial pH,36
+Chloride,37
+Ca,38
+Fibrinogen,39
+Urine output,40
+Na,41
